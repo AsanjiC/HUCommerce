@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Login</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Login;
+		--web-view-id: Login;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Login;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#Login {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: Login;
+		--web-view-id: Login;
+		--web-enable-deep-linking: true;
+	}
+	.Rectangle_1 {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 115px;
+		left: 0px;
+		top: 965px;
+	}
+	#HC {
+		position: absolute;
+		left: 828.5px;
+		top: 261.5px;
+		overflow: visible;
+		width: 285px;
+		white-space: nowrap;
+		line-height: 220px;
+		margin-top: -18.5px;
+		text-align: center;
+		font-family: Century;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 183px;
+		color: rgba(55,67,196,1);
+	}
+	.Rectangle_1_A1_Rectangle_14 {
+		position: absolute;
+		overflow: visible;
+		width: 500px;
+		height: 55px;
+		left: 720px;
+		top: 551px;
+	}
+	.Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 500px;
+		height: 55px;
+		left: 720px;
+		top: 690px;
+	}
+	.Rectangle_3 {
+		position: absolute;
+		overflow: visible;
+		width: 250px;
+		height: 55px;
+		left: 682px;
+		top: 790px;
+	}
+	.Rectangle_4 {
+		position: absolute;
+		overflow: visible;
+		width: 250px;
+		height: 55px;
+		left: 988px;
+		top: 790px;
+	}
+	#Password {
+		position: absolute;
+		left: 720px;
+		top: 633px;
+		overflow: visible;
+		width: 213px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -147.5px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 50px;
+		color: rgba(255,255,255,1);
+	}
+	#Username {
+		position: absolute;
+		left: 720px;
+		top: 494px;
+		overflow: visible;
+		width: 229px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -147.5px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 50px;
+		color: rgba(255,255,255,1);
+	}
+	#Enter_username {
+		position: absolute;
+		left: 881px;
+		top: 565px;
+		overflow: visible;
+		width: 179px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -160px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(0,0,0,1);
+	}
+	#Enter_password {
+		position: absolute;
+		left: 883px;
+		top: 704px;
+		overflow: visible;
+		width: 175px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -160px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(0,0,0,1);
+	}
+	#Cancel {
+		position: absolute;
+		left: 1046px;
+		top: 791px;
+		overflow: visible;
+		width: 135px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -150px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_5 {
+		position: absolute;
+		overflow: visible;
+		width: 250px;
+		height: 57px;
+		left: 835px;
+		top: 866px;
+	}
+	#Register {
+		position: absolute;
+		left: 878px;
+		top: 866px;
+		overflow: visible;
+		width: 165px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -150px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		color: rgba(255,255,255,1);
+	}
+	#Forget_password {
+		position: absolute;
+		left: 811px;
+		top: 905px;
+		overflow: hidden;
+		width: 309px;
+		height: 36px;
+		line-height: 345px;
+		margin-top: -160px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(255,255,255,1);
+	}
+	#Submit {
+		position: absolute;
+		left: 734px;
+		top: 791px;
+		overflow: visible;
+		width: 145px;
+		white-space: nowrap;
+		line-height: 345px;
+		margin-top: -150px;
+		text-align: center;
+		font-family: Georgia;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 45px;
+		color: rgba(255,255,255,1);
+	}
+	.Rectangle_2_A1_Rectangle_19 {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 172px;
+		left: 0px;
+		top: -3px;
+	}
+	.HUCommV1 {
+		position: absolute;
+		overflow: visible;
+		width: 727px;
+		height: 162px;
+		left: 597px;
+		top: 7px;
+	}
+	#My_Account___Log_In {
+		position: absolute;
+		left: 1541px;
+		top: 80px;
+		overflow: visible;
+		width: 295px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		color: rgba(55,67,196,1);
+	}
+	#Hampton_University___Login__ {
+		position: absolute;
+		left: 31px;
+		top: 83px;
+		overflow: visible;
+		width: 405px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		color: rgba(55,67,196,1);
+	}
+</style>
+</head>
+<body>
+<div id="Login">
+	<svg class="Rectangle_1">
+		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="115">
+		</rect>
+	</svg>
+	<div id="HC">
+		<span>HC</span>
+	</div>
+	<svg class="Rectangle_1_A1_Rectangle_14">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1_A1_Rectangle_14" rx="0" ry="0" x="0" y="0" width="500" height="55">
+		</rect>
+	</svg>
+	<svg class="Rectangle_2">
+		<rect fill="rgba(255,255,255,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="500" height="55">
+		</rect>
+	</svg>
+	<svg class="Rectangle_3">
+		<rect fill="rgba(13,190,0,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3" rx="27.5" ry="27.5" x="0" y="0" width="250" height="55">
+		</rect>
+	</svg>
+	<svg class="Rectangle_4">
+		<rect fill="rgba(209,26,26,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_4" rx="27.5" ry="27.5" x="0" y="0" width="250" height="55">
+		</rect>
+	</svg>
+
+	<div id="Enter_username">
+		<span>Enter email</span>
+	<form method="POST" action="http://127.0.0.1/endpoint">
+    <input type="text" name="my-field" value="testing 1 2 3">
+    <input type="submit" value="Submit form">
+	</form>
+	</div>
+
+	<div id="Enter_password">
+		<span>Enter password</span>
+	</div>
+	<div id="Cancel">
+		<span>Cancel</span>
+	</div>
+	<svg class="Rectangle_5">
+		<rect fill="rgba(0,0,0,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_5" rx="28.5" ry="28.5" x="0" y="0" width="250" height="57">
+		</rect>
+	</svg>
+
+	<svg class="Rectangle_2_A1_Rectangle_19">
+		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2_A1_Rectangle_19" rx="0" ry="0" x="0" y="0" width="1920" height="172">
+		</rect>
+	</svg>
+	<svg class="HUCommV1">
+		<pattern elementId="HUCommV1_A1_Rectangle_21" id="HUCommV1_A1_Rectangle_21_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="HUCommV1_A1_Rectangle_21_pattern.png" xlink:href="HUCommV1_A1_Rectangle_21_pattern.png"></image>
+		</pattern>
+		<rect fill="url(#HUCommV1_A1_Rectangle_21_pattern)" id="HUCommV1" rx="0" ry="0" x="0" y="0" width="727" height="162">
+		</rect>
+	</svg>
+	<div id="My_Account___Log_In">
+		<span>My Account | Log In</span>
+	</div>
+	<div id="Hampton_University___Login__">
+		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Login.html">Login</a> <br/> </span>
+		
+	</div>
+</div>
+</body>
+</html>

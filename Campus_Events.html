@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<title>Campus Events</title>
+<style id="applicationStylesheet" type="text/css">
+	.mediaViewInfo {
+		--web-view-name: Campus Events;
+		--web-view-id: Campus_Events;
+		--web-enable-deep-linking: true;
+	}
+	:root {
+		--web-view-ids: Campus_Events;
+	}
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	#Campus_Events {
+		position: absolute;
+		box-sizing: border-box;
+		background: #E5E5E5;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		--web-view-name: Campus Events;
+		--web-view-id: Campus_Events;
+		--web-enable-deep-linking: true;
+	}
+	#NavigationBar_Compact_Light {
+		position: absolute;
+		width: 1255px;
+		height: 172.25px;
+		left: 333px;
+		top: 115px;
+		overflow: visible;
+	}
+	#Background {
+		filter: blur(10px);
+	}
+	.Background {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 1254.36px;
+		height: 172px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	.Separator {
+		overflow: visible;
+		position: absolute;
+		top: 172.25px;
+		left: 0px;
+		width: 1254.36px;
+		height: 0.5px;
+	}
+	#Search_Field_Type {
+		position: absolute;
+		width: 1255px;
+		height: 36px;
+		left: 0px;
+		top: 117px;
+		overflow: visible;
+	}
+	.Search_Field_Type_background {
+		position: absolute;
+		overflow: visible;
+		width: 1255px;
+		height: 36px;
+		left: 0px;
+		top: 0px;
+	}
+	.__Field_Links_to {
+		position: absolute;
+		overflow: visible;
+		width: 1223px;
+		height: 36px;
+		left: 17px;
+		top: 0px;
+	}
+	.Search_Field {
+		position: absolute;
+		overflow: visible;
+		width: 1223px;
+		height: 36px;
+		left: 16px;
+		top: 0px;
+	}
+	#__Placeholder_Label {
+		position: absolute;
+		left: 46px;
+		top: 11px;
+		overflow: visible;
+		width: 36px;
+		white-space: nowrap;
+		line-height: 14px;
+		margin-top: -1.5px;
+		text-align: left;
+		font-family: SF Pro Text;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 11px;
+		color: rgba(142,142,147,1);
+		letter-spacing: -0.0040999999642372135px;
+	}
+	#Search_Glyph {
+		position: absolute;
+		width: 14px;
+		height: 14px;
+		left: 24px;
+		top: 11px;
+		overflow: visible;
+	}
+	.Search_Glyph_background {
+		position: absolute;
+		overflow: visible;
+		width: 14px;
+		height: 14px;
+		left: 0px;
+		top: 0px;
+	}
+	.Search {
+		overflow: visible;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 14px;
+		height: 14px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Large_Title {
+		position: absolute;
+		left: 16px;
+		top: 68px;
+		overflow: hidden;
+		width: 426px;
+		height: 49px;
+		line-height: 41px;
+		margin-top: -3.5px;
+		text-align: left;
+		font-family: SF Pro Display;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 34px;
+		color: rgba(0,0,0,1);
+		letter-spacing: -0.0040999999642372135px;
+	}
+	#Right_Accessory {
+		position: absolute;
+		width: 568.694px;
+		height: 45.048px;
+		left: 685.666px;
+		top: 21px;
+		overflow: visible;
+	}
+	.Right_Accessory_background {
+		position: absolute;
+		overflow: visible;
+		width: 567.77px;
+		height: 45.048px;
+		left: 0px;
+		top: 0px;
+	}
+	.Button_Links_to {
+		position: absolute;
+		overflow: visible;
+		width: 491.694px;
+		height: 45.048px;
+		left: 77px;
+		top: 0px;
+	}
+	#__Label {
+		position: absolute;
+		left: 263.914px;
+		top: 10px;
+		overflow: hidden;
+		width: 290.781px;
+		height: 22px;
+		line-height: 22px;
+		margin-top: -2.5px;
+		text-align: right;
+		font-family: SF Pro Text;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 17px;
+		color: rgba(0,122,255,1);
+		letter-spacing: -0.0040999999642372135px;
+	}
+	.Rectangle_1 {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 115px;
+		left: 0px;
+		top: 965px;
+	}
+	.Rectangle_2 {
+		position: absolute;
+		overflow: visible;
+		width: 1920px;
+		height: 163px;
+		left: 0px;
+		top: 0px;
+	}
+	#_Oct_15____Tweflth_Night____Li {
+		position: absolute;
+		left: 402.5px;
+		top: 257.5px;
+		overflow: visible;
+		width: 1116px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 34px;
+		color: rgba(55,67,196,1);
+	}
+	#Hampton_University___Campus_Ev {
+		position: absolute;
+		left: 25px;
+		top: 71px;
+		overflow: visible;
+		width: 563px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		color: rgba(55,67,196,1);
+	}
+	#My_Account___Log_Out {
+		position: absolute;
+		left: 1518px;
+		top: 71px;
+		overflow: visible;
+		width: 319px;
+		white-space: nowrap;
+		text-align: center;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 35px;
+		color: rgba(55,67,196,1);
+	}
+	.HUCommV1 {
+		position: absolute;
+		overflow: visible;
+		width: 727px;
+		height: 162px;
+		left: 597px;
+		top: 10px;
+	}
+</style>
+</head>
+<body>
+<div id="Campus_Events">
+	<div id="NavigationBar_Compact_Light" class="NavigationBar_Compact_Light">
+		<svg class="Background" viewBox="0 0 1254.36 172">
+			<path fill="rgba(248,248,248,0.82)" id="Background" d="M 0 0 L 1254.359985351562 0 L 1254.359985351562 172 L 0 172 L 0 0 Z">
+			</path>
+		</svg>
+		<svg class="Separator">
+			<path fill="transparent" stroke="rgba(0,0,0,0.302)" stroke-width="0.5px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Separator" d="M 0 0 L 1254.359985351562 0">
+			</path>
+		</svg>
+		<div id="Search_Field_Type">
+			<svg class="Search_Field_Type_background">
+				<rect fill="rgba(0,0,0,0)" id="Search_Field_Type_background" rx="0" ry="0" x="0" y="0" width="1255" height="36">
+				</rect>
+			</svg>
+			<svg class="__Field_Links_to">
+				<rect fill="rgba(0,0,0,0)" id="__Field_Links_to" rx="0" ry="0" x="0" y="0" width="1223" height="36">
+				</rect>
+			</svg>
+			<svg class="Search_Field">
+				<rect fill="rgba(142,142,147,0.239)" id="Search_Field" rx="10" ry="10" x="0" y="0" width="1223" height="36">
+				</rect>
+			</svg>
+			<div id="__Placeholder_Label">
+				<span>Search</span>
+			</div>
+			<div id="Search_Glyph">
+				<svg class="Search_Glyph_background">
+					<rect fill="rgba(0,0,0,0)" id="Search_Glyph_background" rx="0" ry="0" x="0" y="0" width="14" height="14">
+					</rect>
+				</svg>
+				<svg class="Search" viewBox="0 0 14 14">
+					<path fill="rgba(142,142,147,1)" id="Search" d="M 13.17330074310303 14 C 12.94829177856445 13.99998950958252 12.73015308380127 13.90662384033203 12.57483386993408 13.74385452270508 L 8.74534797668457 9.912327766418457 L 8.741747856140137 9.915037155151367 C 7.804022312164307 10.60982799530029 6.690276622772217 10.97710037231445 5.52091121673584 10.97714042663574 L 5.499960899353027 10.97710037231445 C 4.033066749572754 10.9683895111084 2.654332637786865 10.39182567596436 1.617716431617737 9.35362434387207 C 0.5811005234718323 8.315412521362305 0.006612768396735191 6.935750961303711 8.279384201159701e-05 5.468763828277588 C -0.007967174984514713 4.025978088378906 0.5713406205177307 2.614024877548218 1.589476585388184 1.594944596290588 C 2.602122783660889 0.5813344717025757 4.004396915435791 0 5.436731815338135 0 L 5.460361480712891 5.000296005164273e-05 C 6.927335739135742 0.008750518783926964 8.306079864501953 0.5851846933364868 9.342606544494629 1.62316620349884 C 10.37922286987305 2.661247491836548 10.95371055603027 4.04103946685791 10.96023941040039 5.508366107940674 C 10.96568012237549 6.678195476531982 10.60249137878418 7.795842170715332 9.909944534301758 8.74046802520752 L 13.74302959442139 12.57468509674072 C 13.96069812774658 12.78157711029053 14.04898834228516 13.09059524536133 13.97342777252197 13.38113212585449 C 13.89875888824463 13.67084980010986 13.67183876037598 13.89778327941895 13.3812313079834 13.9733772277832 C 13.31328105926514 13.99103832244873 13.24333095550537 14 13.17330074310303 14 Z M 5.443741798400879 1.098065137863159 C 4.298305988311768 1.098105072975159 3.177230358123779 1.563302636146545 2.367973804473877 2.374380588531494 C 1.553536891937256 3.18976902961731 1.090018630027771 4.318935871124268 1.096278548240662 5.472363948822021 C 1.101498484611511 6.645943641662598 1.561116695404053 7.749679088592529 2.390473604202271 8.58024787902832 C 3.219800472259521 9.410807609558105 4.322825908660889 9.872054100036621 5.496361255645752 9.879034996032715 L 5.513241291046143 9.879055023193359 C 6.660156726837158 9.879095077514648 7.782452583312988 9.413578033447266 8.592349052429199 8.601849555969238 C 9.40678596496582 7.787351608276367 9.870304107666016 6.658184051513672 9.864044189453125 5.503866195678711 C 9.858824729919434 4.330256462097168 9.399206161499023 3.226561069488525 8.569849014282227 2.396101713180542 C 7.740462303161621 1.56561279296875 6.637436866760254 1.104645490646362 5.463961601257324 1.098105072975159 L 5.443741798400879 1.098065137863159 Z">
+					</path>
+				</svg>
+			</div>
+		</div>
+		<div id="Large_Title">
+			<span>Search Previous Listings</span>
+		</div>
+		<div id="Right_Accessory">
+			<svg class="Right_Accessory_background">
+				<rect fill="rgba(0,0,0,0)" id="Right_Accessory_background" rx="0" ry="0" x="0" y="0" width="567.77" height="45.048">
+				</rect>
+			</svg>
+			<svg class="Button_Links_to">
+				<rect fill="rgba(0,0,0,0)" id="Button_Links_to" rx="0" ry="0" x="0" y="0" width="491.694" height="45.048">
+				</rect>
+			</svg>
+			<div id="__Label">
+				<span>Action</span>
+			</div>
+		</div>
+	</div>
+	<svg class="Rectangle_1">
+		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="115">
+		</rect>
+	</svg>
+	<svg class="Rectangle_2">
+		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="163">
+		</rect>
+	</svg>
+	<div id="_Oct_15____Tweflth_Night____Li">
+		<span><br/>Oct 15 > “Tweflth Night”  (Little Theater Armstrong Hall) pic<br/><br/>Oct 10 > “Ain’t Misbehaven”  (Little Theater Armstrong Hall) pic<br/><a href="Campus_Events_2.html"><br/>Sept 28 > Parents’ Weekend — October 4-6 (Armstrong Stadium) pic<br/></a><br/>Sep 26 > ACM Interest Meeting 9/28 (S&T 113) pic<br/><br/>Sep 25 > Mr. Pirate Pageant Final Practice 9/27 (Ogden Hall) pic<br/><br/>Sep 25 > CAREER FAIR  (Hampton Convocation Center) pic<br/><br/>                                           Next Page ></span><br>
+	</div>
+	<div id="Hampton_University___Campus_Ev">
+		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Campus_Events.html">Campus Events</a> <br/> </span>
+	</div>
+	<div id="My_Account___Log_Out">
+		<span>My Account | Log Out</span>
+	</div>
+	<svg class="HUCommV1">
+		<pattern elementId="HUCommV1_A0_Rectangle_10" id="HUCommV1_A0_Rectangle_10_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="HUCommV1_A0_Rectangle_10_pattern.png" xlink:href="HUCommV1_A0_Rectangle_10_pattern.png"></image>
+		</pattern>
+		<rect fill="url(#HUCommV1_A0_Rectangle_10_pattern)" id="HUCommV1" rx="0" ry="0" x="0" y="0" width="727" height="162">
+		</rect>
+	</svg>
+</div>
+</body>
+</html>

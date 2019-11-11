@@ -1,0 +1,138 @@
+.mediaViewInfo {
+	--web-view-name: Campus Events 2;
+	--web-view-id: Campus_Events_2;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Campus_Events_2;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+#Campus_Events_2 {
+	position: absolute;
+	box-sizing: border-box;
+	background: #E5E5E5;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(255,255,255,1);
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	--web-view-name: Campus Events 2;
+	--web-view-id: Campus_Events_2;
+	--web-scale-on-resize: true;
+	--web-enable-deep-linking: true;
+}
+.Rectangle_1 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 115px;
+	left: 0px;
+	top: 965px;
+}
+.Rectangle_2 {
+	position: absolute;
+	overflow: visible;
+	width: 1920px;
+	height: 163px;
+	left: 0px;
+	top: 0px;
+}
+#Parents__Weekend___October_4_6 {
+	position: absolute;
+	left: 397.5px;
+	top: 199.5px;
+	overflow: visible;
+	width: 1051px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Franklin Gothic Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(55,67,196,1);
+}
+.Image_2 {
+	position: absolute;
+	overflow: visible;
+	width: 542px;
+	height: 542px;
+	left: 387px;
+	top: 291px;
+}
+.Image_3 {
+	position: absolute;
+	overflow: visible;
+	width: 450px;
+	height: 303px;
+	left: 1053px;
+	top: 329px;
+}
+#Location__Armstrong_Stadium {
+	position: absolute;
+	left: 1053.5px;
+	top: 272.5px;
+	overflow: visible;
+	width: 427px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Franklin Gothic Medium;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: rgba(55,67,196,1);
+}
+#We_are_extending_an_invitation {
+	position: absolute;
+	left: 387.5px;
+	top: 856.5px;
+	overflow: visible;
+	width: 1147px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Franklin Gothic Book;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 34px;
+	color: rgba(55,67,196,1);
+}
+#Hampton_University___Campus_Ev {
+	position: absolute;
+	left: 25px;
+	top: 71px;
+	overflow: visible;
+	width: 563px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Franklin Gothic Book;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(55,67,196,1);
+}
+#My_Account___Log_Out {
+	position: absolute;
+	left: 1518px;
+	top: 71px;
+	overflow: visible;
+	width: 319px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Franklin Gothic Book;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(55,67,196,1);
+}
+.HUCommV1 {
+	position: absolute;
+	overflow: visible;
+	width: 727px;
+	height: 162px;
+	left: 597px;
+	top: 10px;
+}
