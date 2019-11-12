@@ -207,7 +207,7 @@
 		left: 0px;
 		top: 0px;
 	}
-	#_Oct_15____Tweflth_Night____Li {
+	#CampusEvents {
 		position: absolute;
 		left: 402.5px;
 		top: 257.5px;
@@ -322,8 +322,8 @@
 		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="163">
 		</rect>
 	</svg>
-	<div id="_Oct_15____Tweflth_Night____Li">
-		<span><br/>Oct 15 > “Tweflth Night”  (Little Theater Armstrong Hall) pic<br/><br/>Oct 10 > “Ain’t Misbehaven”  (Little Theater Armstrong Hall) pic<br/><a href="Campus_Events_2.html"><br/>Sept 28 > Parents’ Weekend — October 4-6 (Armstrong Stadium) pic<br/></a><br/>Sep 26 > ACM Interest Meeting 9/28 (S&T 113) pic<br/><br/>Sep 25 > Mr. Pirate Pageant Final Practice 9/27 (Ogden Hall) pic<br/><br/>Sep 25 > CAREER FAIR  (Hampton Convocation Center) pic<br/><br/>                                           Next Page ></span><br>
+	<div id="CampusEvents">
+		                                        
 	</div>
 	<div id="Hampton_University___Campus_Ev">
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Campus_Events.html">Campus Events</a> <br/> </span>
@@ -339,5 +339,26 @@
 		</rect>
 	</svg>
 </div>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+	<script type="text/javascript">
+   	 var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
+   	 $(document).ready(function(){
+   		 $.ajax({
+   			 type: 'GET',
+   			 url: API_URL,
+   			 
+   			 success: function(data){
+   				 $('CampusEvents').html('');
+   				 
+   				 data.Items.forEach(function(getEventPost){
+   					 $('#CampusEvents').append('<p>' + getEventPost.description + '>' + getEventPost.location + '</p>')
+   			 })
+   	 }
+    })
+    
+    });
+    </script>
+
+
 </body>
 </html>
