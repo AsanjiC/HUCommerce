@@ -207,7 +207,7 @@
 		left: 0px;
 		top: 0px;
 	}
-	#_Sept_15___Abbington_Apartment {
+	#HousingEntries {
 		position: absolute;
 		left: 401.5px;
 		top: 287.5px;
@@ -322,8 +322,9 @@
 		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="163">
 		</rect>
 	</svg>
-	<div id="_Sept_15___Abbington_Apartment">
-		<span><a href="Housing_2.html"><br/>Sept 15 > Abbington Apartments Sub-leasing <br/></a><br/>Sept 20 >   Johns Creek Apartment Sub-leasing<br/><br/>Sept 23 >  New Renovated Units Hampton Harbors<br/> <br/>Sep 26 >  ………<br/><br/><br/>                                           Next Page ></span><br>
+	<div id="HousingEntries">
+	
+	
 	</div>
 	<div id="Hampton_University___Housing">
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Housing.html">Housing</a> <br/> </span>
@@ -339,5 +340,25 @@
 		</rect>
 	</svg>
 </div>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+		<script type="text/javascript">
+		var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
+		
+		  $(document).ready(function(){
+			$.ajax({
+				type: 'GET',
+				url: API_URL,
+				
+				success: function(data){
+					$('HousingEntries').html('');
+					
+					data.Items.forEach(function(getHousePostItem){
+						$('#HousingEntries').append('<p>' + getHousePostItem.serviceType + " > " + getHousePostItem.Location + '</p>');
+				}) 
+		}
+	});
+	
+	});
+	</script>
 </body>
 </html>
