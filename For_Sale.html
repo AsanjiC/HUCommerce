@@ -235,7 +235,7 @@
 		font-size: 35px;
 		color: rgba(55,67,196,1);
 	}
-	#_Sept_15____Tweflth_Night____L {
+	#For_Sale {
 		position: absolute;
 		left: 402.5px;
 		top: 257.5px;
@@ -328,7 +328,7 @@
 	<div id="My_Account___Log_Out">
 		<span>My Account | Log Out</span>
 	</div>
-	<div id="_Sept_15____Tweflth_Night____L">
+	<div id="For_Sale">
 		<span><a href="For_Sale_2.html"><br/>Sept 15 > DS Air Jordan 1 Size 10  (Wilder Hall) pic<br/></a><br/>Sept 20 > “Ain’t Misbehaven”  (Little Theater Armstrong Hall) pic<br/><br/>Sept 23 > Parents’ Weekend — October 4-6 (Armstrong Stadium) pic<br/><br/>Sep 26 > Accenture Cookout / Kickball (Beamis Lawn) pic<br/><br/>Oct 6 > CAREER FAIR  (Hampton Convocation Center) pic<br/><br/>                                           Next Page ></span><br>
 	</div>
 	<svg class="HUCommV1">
@@ -339,5 +339,26 @@
 		</rect>
 	</svg>
 </div>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script type="text/javascript">
+	var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
+	$(document).ready(function(){
+		$.ajax({
+			type: 'GET',
+			url: API_URL,
+			
+			success: function(data){
+				$('For_Sale').html('');
+				
+				data.Items.forEach(function(getSalePosts){
+					$('For_Sale').append('<p>' + getPostItem.message + '</p>')
+			})
+	}
+})
+
+});
+</script>
+
+
 </body>
 </html>
