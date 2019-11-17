@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>ViolentStorm2</title>
+<title>Housing</title>
 <style id="applicationStylesheet" type="text/css">
 	.mediaViewInfo {
-		--web-view-name: For Sale;
-		--web-view-id: For_Sale;
+		--web-view-name: Housing;
+		--web-view-id: Housing;
 		--web-enable-deep-linking: true;
 	}
 	:root {
-		--web-view-ids: For_Sale;
+		--web-view-ids: Housing;
 	}
 	* {
 		margin: 0;
 		padding: 0;
 	}
-	#For_Sale {
+	#Housing {
 		position: absolute;
 		box-sizing: border-box;
 		background: #E5E5E5;
@@ -27,8 +27,8 @@
 		overflow: hidden;
 		margin: 0;
 		padding: 0;
-		--web-view-name: For Sale;
-		--web-view-id: For_Sale;
+		--web-view-name: Housing;
+		--web-view-id: Housing;
 		--web-enable-deep-linking: true;
 	}
 	#NavigationBar_Compact_Light {
@@ -207,12 +207,26 @@
 		left: 0px;
 		top: 0px;
 	}
-	#Hampton_University___For_Sale_ {
+	#For_Sale {
 		position: absolute;
-		left: 36px;
+		left: 401.5px;
+		top: 287.5px;
+		overflow: visible;
+		width: 727px;
+		white-space: nowrap;
+		text-align: left;
+		font-family: Franklin Gothic Book;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 34px;
+		color: rgba(55,67,196,1);
+	}
+	#Hampton_University___Housing {
+		position: absolute;
+		left: 84px;
 		top: 71px;
 		overflow: visible;
-		width: 455px;
+		width: 446px;
 		white-space: nowrap;
 		text-align: center;
 		font-family: Franklin Gothic Book;
@@ -235,20 +249,6 @@
 		font-size: 35px;
 		color: rgba(55,67,196,1);
 	}
-	#For_Sale {
-		position: absolute;
-		left: 402.5px;
-		top: 257.5px;
-		overflow: visible;
-		width: 1116px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Franklin Gothic Book;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 34px;
-		color: rgba(55,67,196,1);
-	}
 	.HUCommV1 {
 		position: absolute;
 		overflow: visible;
@@ -260,7 +260,7 @@
 </style>
 </head>
 <body>
-<div id="For_Sale">
+<div id="Housing">
 	<div id="NavigationBar_Compact_Light" class="NavigationBar_Compact_Light">
 		<svg class="Background" viewBox="0 0 1254.36 172">
 			<path fill="rgba(248,248,248,0.82)" id="Background" d="M 0 0 L 1254.359985351562 0 L 1254.359985351562 172 L 0 172 L 0 0 Z">
@@ -322,43 +322,43 @@
 		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="163">
 		</rect>
 	</svg>
-	<div id="Hampton_University___For_Sale_">
+	<div id="For_Sale">
+
+
+	</div>
+	<div id="Hampton_University___Housing">
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="For_Sale.html">For Sale</a> <br/> </span>
 	</div>
 	<div id="My_Account___Log_Out">
-		<span>My Account | Log Out</span>
-	</div>
-	<div id="For_Sale">
-		<span><a href="For_Sale_2.html"><br/>Sept 15 > DS Air Jordan 1 Size 10  (Wilder Hall) pic<br/></a><br/>Sept 20 > “Ain’t Misbehaven”  (Little Theater Armstrong Hall) pic<br/><br/>Sept 23 > Parents’ Weekend — October 4-6 (Armstrong Stadium) pic<br/><br/>Sep 26 > Accenture Cookout / Kickball (Beamis Lawn) pic<br/><br/>Oct 6 > CAREER FAIR  (Hampton Convocation Center) pic<br/><br/>                                           Next Page ></span><br>
+		<span>My Account</span>
 	</div>
 	<svg class="HUCommV1">
-		<pattern elementId="HUCommV1_A2_Rectangle_28" id="HUCommV1_A2_Rectangle_28_pattern" x="0" y="0" width="100%" height="100%">
-			<image x="0" y="0" width="100%" height="100%" href="HUCommV1_A2_Rectangle_28_pattern.png" xlink:href="HUCommV1_A2_Rectangle_28_pattern.png"></image>
+		<pattern elementId="HUCommV1_A6_Rectangle_64" id="HUCommV1_A6_Rectangle_64_pattern" x="0" y="0" width="100%" height="100%">
+			<image x="0" y="0" width="100%" height="100%" href="HUCommV1_A6_Rectangle_64_pattern.png" xlink:href="HUCommV1_A6_Rectangle_64_pattern.png"></image>
 		</pattern>
-		<rect fill="url(#HUCommV1_A2_Rectangle_28_pattern)" id="HUCommV1" rx="0" ry="0" x="0" y="0" width="727" height="162">
+		<rect fill="url(#HUCommV1_A6_Rectangle_64_pattern)" id="HUCommV1" rx="0" ry="0" x="0" y="0" width="727" height="162">
 		</rect>
 	</svg>
 </div>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script type="text/javascript">
-	var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
-	$(document).ready(function(){
-		$.ajax({
-			type: 'GET',
-			url: API_URL,
-			
-			success: function(data){
-				$('For_Sale').html('');
-				
-				data.Items.forEach(function(getSalePosts){
-					$('For_Sale').append('<p>' + getPostItem.message + '</p>')
-			})
-	}
-})
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+		<script type="text/javascript">
+		var API_URL='https://wwwtqk6qg9.execute-api.us-east-1.amazonaws.com/ToriEpps/tori';
 
-});
-</script>
+		  $(document).ready(function(){
+			$.ajax({
+				type: 'GET',
+				url: API_URL,
 
+				success: function(data){
+					$('#For_Sale').html('');
 
+					data.Items.forEach(function(getFSItem){
+						$('#For_Sale').append('<p>' + getFSItem.PostDate + " > " + getFSItem.Type + " > " + getFSItem.Description + " > " + getFSItem.Location + '</p>');
+				})
+		}
+	});
+
+	});
+	</script>
 </body>
 </html>

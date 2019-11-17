@@ -323,14 +323,15 @@
 		</rect>
 	</svg>
 	<div id="HousingEntries">
-	
-	
+
+
+
 	</div>
 	<div id="Hampton_University___Housing">
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Housing.html">Housing</a> <br/> </span>
 	</div>
 	<div id="My_Account___Log_Out">
-		<span>My Account | Log Out</span>
+		<span>My Account</span>
 	</div>
 	<svg class="HUCommV1">
 		<pattern elementId="HUCommV1_A6_Rectangle_64" id="HUCommV1_A6_Rectangle_64_pattern" x="0" y="0" width="100%" height="100%">
@@ -340,25 +341,27 @@
 		</rect>
 	</svg>
 </div>
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-		<script type="text/javascript">
-		var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
-		
-		  $(document).ready(function(){
+
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script type="text/javascript">
+		var API_URL='https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHS2/JamesSanford';
+
+		$(document).ready(function(){
 			$.ajax({
 				type: 'GET',
 				url: API_URL,
-				
+
 				success: function(data){
-					$('HousingEntries').html('');
-					
-					data.Items.forEach(function(getHousePostItem){
-						$('#HousingEntries').append('<p>' + getHousePostItem.serviceType + " > " + getHousePostItem.Location + '</p>');
-				}) 
+					$('#HousingEntries').html('');
+
+					data.Items.forEach(function(getItem){
+						$('#HousingEntries').append('<p>' + getItem.Postdate + " > " + getItem.Description + " > " + getItem.Type + " > " + getItem.Location +  '</p>');
+				})
 		}
 	});
-	
+
 	});
-	</script>
+</script>
 </body>
 </html>
