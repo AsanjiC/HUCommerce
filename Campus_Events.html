@@ -1,6 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type = "text/javascript">
+var API_Gateway_URL = 'https://k9p9gp49o7.execute-api.us-east-1.amazonaws.com/default';
+
+function submitToAPI(e){
+e.preventDefault();
+
+$('#submitButton').on('click',function(){
+
+	var type = $("#type-input").val();
+	var location = $("#location-input").val();
+	var desc = $("#description-input").val();
+	var date = $("#date-input").val();
+	var data = {
+		 type : type,
+		 location : location,
+		 description : description,
+		 date : date,
+	 };
+
+
+	$.ajax({
+		type: 'POST',
+		url: API_Gateway_URL,
+		data: JSON.stringify(data),
+		contentType:"application/json"
+
+		success: function(){
+			$('#comm_event_post').html('');
+		}
+
+
+	});
+
+});
+
+
+}
+</script>
+
+
+
+
+
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>Campus Events</title>
@@ -257,6 +302,16 @@
 		left: 597px;
 		top: 10px;
 	}
+
+	.community_event_post {
+		position: absolute;
+		top: 300px;
+		left: 70px;
+		text-align: left;
+		overflow: visible;
+
+	}
+
 </style>
 </head>
 <body>
@@ -325,6 +380,25 @@
 	<div id="_Oct_15____Tweflth_Night____Li">
 		<span><br/>Oct 15 > “Tweflth Night”  (Little Theater Armstrong Hall) pic<br/><br/>Oct 10 > “Ain’t Misbehaven”  (Little Theater Armstrong Hall) pic<br/><a href="Campus_Events_2.html"><br/>Sept 28 > Parents’ Weekend — October 4-6 (Armstrong Stadium) pic<br/></a><br/>Sep 26 > ACM Interest Meeting 9/28 (S&T 113) pic<br/><br/>Sep 25 > Mr. Pirate Pageant Final Practice 9/27 (Ogden Hall) pic<br/><br/>Sep 25 > CAREER FAIR  (Hampton Convocation Center) pic<br/><br/>                                           Next Page ></span><br>
 	</div>
+
+
+	<div class="community_event_post">
+	<form id="comm_event_post" method="post">
+				<h4 style="color:rgba(55,67,196,1);">Add a new Listing <br></br></h4>
+	      <h4 style="color:rgba(55,67,196,1);">Type of Event:</h4>
+	      <input type="name" style="height:35px;" id="type-input" placeholder="Enter name of event here…" class="form-control" style="width:100%;" /><br/>
+	      <h4 style="color:rgba(55,67,196,1);">Location:</h4>
+	      <input type="Poc" style="height:35px;" id="location-input" placeholder="Enter point of contact number" class="form-control" style="width:100%;"/><br/>
+	      <h4 style="color:rgba(55,67,196,1);">Description:</h4>
+	      <input type="description" style="height:35px;" id="description-input" placeholder="Enter description of event here…" class="form-control" style="width:100%;"/><br/>
+				<h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
+	      <input type="PostDate" style="height:35px;" id="date-input" placeholder="Enter current date here…" class="form-control" style="width:100%;"/><br/>
+	      <button id = 'submitButton' type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+	</form>
+	</div>
+
+
+
 	<div id="Hampton_University___Campus_Ev">
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Campus_Events.html">Campus Events</a> <br/> </span>
 	</div>
