@@ -257,11 +257,7 @@
 		left: 597px;
 		top: 10px;
 	}
-	table, th, td{
-	}
-	th, td{
-	paddubg: 5px;
-	text-align: left;}
+
 }
 </style>
 </head>
@@ -279,10 +275,10 @@
 				<p>
 				<table style="width:59.4%">
 				<tr>
-				<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post Date&nbsp;&nbsp;&nbsp;</font></tr>
-				<tr><font size ="6">&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
-				<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
-				<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
+				<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+				<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+				<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
+				<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
 				</tr>
 				</table>
 				</p>
@@ -344,7 +340,7 @@
 					$('#HousingEntries').html('');
 					
 					data.Items.forEach(function(getItem){
-						$('#HousingEntries').append('<tr>' + '<td>' +getItem.Postdate + " > " + getItem.Type + " > " + getItem.Location + " > " + getItem.Description + '</td>' + '</tr>');
+						$('#HousingEntries').append('<p>' +getItem.Postdate + " &nbsp; > &nbsp; " + getItem.Type + " &nbsp; > &nbsp; " + getItem.Location + " &nbsp; > &nbsp; " + getItem.Description + '<br>' + "&nbsp;" + '</p>');
 				}) 
 		}
 	});
