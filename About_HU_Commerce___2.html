@@ -81,7 +81,7 @@
 		height: 87.281px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#Last_Name {
+	#Form {
 		position: absolute;
 		left: 863px;
 		top: 293px;
@@ -89,11 +89,31 @@
 		width: 195px;
 		white-space: nowrap;
 		text-align: center;
+		margin-left: -80px;
 		font-family: Franklin Gothic;
 		font-style: normal;
 		font-weight: normal;
 		font-size: 40px;
 		color: rgba(15,15,15,1);
+	}
+	#Name {
+		display: inline-block;
+		margin-left: -75px;
+	}
+	#Phone_Number {
+		display:inline-block;
+		margin:55px;
+	}
+	#email {
+		margin-bottom:55px;
+		margin-left: -80px;
+
+	}
+	#Comments {
+		margin-left: -75px;
+	}
+	.submitButton {
+		size: 100px;
 	}
 	.Path_6 {
 		overflow: visible;
@@ -118,14 +138,7 @@
 		font-size: 40px;
 		color: rgba(15,15,15,1);
 	}
-	.Rectangle_3 {
-		position: absolute;
-		overflow: visible;
-		width: 534px;
-		height: 87.28px;
-		left: 1293px;
-		top: 371px;
-	}
+	
 	.Path_7 {
 		overflow: visible;
 		position: absolute;
@@ -135,20 +148,8 @@
 		height: 87.281px;
 		transform: matrix(1,0,0,1,0,0);
 	}
-	#Email {
-		position: absolute;
-		left: 316px;
-		top: 502px;
-		overflow: visible;
-		width: 101px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Franklin Gothic;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 40px;
-		color: rgba(15,15,15,1);
-	}
+	
+	
 	.Rectangle_5 {
 		position: absolute;
 		overflow: visible;
@@ -157,28 +158,8 @@
 		left: 679px;
 		top: 578px;
 	}
-	#Concern_Inquiry {
-		position: absolute;
-		left: 1120px;
-		top: 500px;
-		overflow: visible;
-		width: 283px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Franklin Gothic;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 40px;
-		color: rgba(15,15,15,1);
-	}
-	#Group_15 {
-		position: absolute;
-		width: 248px;
-		height: 82.016px;
-		left: 960px;
-		top: 860.984px;
-		overflow: visible;
-	}
+	
+	
 	#Group_14 {
 		position: absolute;
 		width: 248px;
@@ -218,37 +199,7 @@
 		top: 860.984px;
 		overflow: visible;
 	}
-	#Group_14_A5_Group_13 {
-		position: absolute;
-		width: 282.935px;
-		height: 82.016px;
-		left: 0px;
-		top: 0px;
-		overflow: visible;
-	}
-	.Path_8_A5_Path_9 {
-		overflow: visible;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 282.935px;
-		height: 82.016px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Submit {
-		position: absolute;
-		left: 67px;
-		top: 15.016px;
-		overflow: visible;
-		width: 125px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Franklin Gothic;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 40px;
-		color: rgba(15,15,15,1);
-	}
+	
 	.Rectangle_2 {
 		position: absolute;
 		overflow: visible;
@@ -1964,6 +1915,7 @@ window.application = new Application();
 </head>
 <body>
 <div id="About_HU_Commerce___2">
+
 	<svg class="Rectangle_1">
 		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="115">
 		</rect>
@@ -1971,63 +1923,26 @@ window.application = new Application();
 	<div id="Contact_Us">
 		<span>Contact Us</span>
 	</div>
-	<div id="First_Name">
-		<span>First Name</span>
+	<div id = "Form">
+		<span>
+			 <form id="for_sale_post" method="post">
+<table>
+
+     <div id = "Name" ><h4 style="color:rgba(55,67,196,1);">Name(First & Last)</h4>
+     <input type="name" style="height:35px;" id="type-input" placeholder ="Enter name" class="form-control" size = 85 style="width:100%;"/><br/></div>
+     <div id = "Phone_Number"><h4 style="color:rgba(55,67,196,1);">Phone Number:</h4>
+     <input type="Phone" style="height:35px;" id="location-input" placeholder="Enter phone number" class="form-control" size = 35 style="width:100%;"/><br/></div>
+     <div id = "email"><h4 style="color:rgba(55,67,196,1);">Email:</h4>
+     <input type="description" style="height:35px;" id="description-input" placeholder="Email" class="form-control" size = 60 style="width:100%;"/><br/></div>
+<div id = "Comments"><h4 style="color:rgba(55,67,196,1);">Comments</h4>
+     <textarea row = "10" cols = "55" type="PostDate" style="height:35px;" id="date-input" placeholder="Enter comment" class="form-control" size = 125 style="width:100%;"/></textarea></div>
+     <button id = 'submitButton' type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+</table>
+</form>
+
+	
 	</div>
-	<svg class="Path_5" viewBox="0 0 516.491 87.281">
-		<path fill="rgba(198,231,228,0.949)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Path_5" d="M 34.53737258911133 0 L 481.9533386230469 0 C 501.0278015136719 0 516.49072265625 17.19396018981934 516.49072265625 38.40378570556641 L 516.49072265625 48.87754440307617 C 516.49072265625 70.08737182617188 501.0278015136719 87.28132629394531 481.9533386230469 87.28132629394531 L 34.53737258911133 87.28132629394531 C 15.46290874481201 87.28132629394531 0 70.08737182617188 0 48.87754440307617 L 0 38.40378570556641 C 0 17.19396018981934 15.46290874481201 0 34.53737258911133 0 Z">
-		</path>
-	</svg>
-	<div id="Last_Name">
-		<span>Last Name</span>
-	</div>
-	<svg class="Path_6" viewBox="0 0 534 87.281">
-		<path fill="rgba(198,231,228,0.949)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Path_6" d="M 35.70820617675781 0 L 498.2918090820312 0 C 518.0128784179688 0 534 17.19396018981934 534 38.40378189086914 L 534 48.87754058837891 C 534 70.08736419677734 518.0128784179688 87.28132629394531 498.2918090820312 87.28132629394531 L 35.70820617675781 87.28132629394531 C 15.98710918426514 87.28132629394531 0 70.08736419677734 0 48.87754058837891 L 0 38.40378189086914 C 0 17.19396018981934 15.98710918426514 0 35.70820617675781 0 Z">
-		</path>
-	</svg>
-	<div id="Student_ID__">
-		<span>Student ID #</span>
-	</div>
-	<svg class="Rectangle_3">
-		<rect fill="rgba(198,231,228,0.941)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_3" rx="43.63999938964844" ry="43.63999938964844" x="0" y="0" width="534" height="87.28">
-		</rect>
-	</svg>
-	<svg class="Path_7" viewBox="0 0 516.491 87.281">
-		<path fill="rgba(198,231,228,0.949)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Path_7" d="M 34.53737258911133 0 L 481.9533386230469 0 C 501.0278015136719 0 516.49072265625 17.19396018981934 516.49072265625 38.40378570556641 L 516.49072265625 48.87754440307617 C 516.49072265625 70.08737182617188 501.0278015136719 87.28132629394531 481.9533386230469 87.28132629394531 L 34.53737258911133 87.28132629394531 C 15.46290874481201 87.28132629394531 0 70.08737182617188 0 48.87754440307617 L 0 38.40378570556641 C 0 17.19396018981934 15.46290874481201 0 34.53737258911133 0 Z">
-		</path>
-	</svg>
-	<div id="Email">
-		<span>Email</span>
-	</div>
-	<svg class="Rectangle_5">
-		<rect fill="rgba(198,231,228,0.988)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_5" rx="44.5" ry="44.5" x="0" y="0" width="1148" height="89">
-		</rect>
-	</svg>
-	<div id="Concern_Inquiry">
-		<span>Concern Inquiry</span>
-	</div>
-	<div id="Group_15">
-		<div id="Group_14">
-			<svg class="Path_8" viewBox="0 0 248 82.016">
-				<path fill="rgba(198,231,228,1)" stroke="rgba(15,16,15,1)" stroke-width="8px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Path_8" d="M 0 0 L 248 0 L 248 82.0155029296875 L 0 82.0155029296875 L 0 0 Z">
-				</path>
-			</svg>
-		</div>
-		<div id="Cancel">
-			<span>Cancel</span>
-		</div>
-	</div>
-	<div id="Group_16">
-		<div id="Group_14_A5_Group_13">
-			<svg class="Path_8_A5_Path_9" viewBox="0 0 282.935 82.016">
-				<path fill="rgba(198,231,228,1)" stroke="rgba(15,16,15,1)" stroke-width="8px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Path_8_A5_Path_9" d="M 0 0 L 282.9345703125 0 L 282.9345703125 82.0155029296875 L 0 82.0155029296875 L 0 0 Z">
-				</path>
-			</svg>
-		</div>
-		<div id="Submit">
-			<span>Submit</span>
-		</div>
-	</div>
+	
 	<svg class="Rectangle_2">
 		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="172">
 		</rect>
