@@ -1,6 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
+			<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+			<script type="text/javascript">
+			var API_URL='https://wwwtqk6qg9.execute-api.us-east-1.amazonaws.com/ToriEpps/tori';
+			var API_GW_URL = 'https://k9p9gp49o7.execute-api.us-east-1.amazonaws.com/default';
+
+			  $(document).ready(function(){
+				$.ajax({
+					type: 'GET',
+					url: API_URL,
+
+					success: function(data){
+						$('#For_Sale').html('');
+
+						data.Items.forEach(function(getFSItem){
+							$('#For_Sale').append('<p>' + getFSItem.PostDate + " > " + getFSItem.Type + " > " + getFSItem.Description + " > " + getFSItem.Location + '</p>');
+					})
+			}
+		});
+
+		});
+
+		function submitToAPI(e){
+		e.preventDefault();
+
+		$('#submitButton').on('click',function(){
+
+			var type = $("#type-input").val();
+			var location = $("#location-input").val();
+			var desc = $("#description-input").val();
+			var date = $("#date-input").val();
+			var data = {
+				 type : type,
+				 loc : loc,
+				 desc : desc,
+				 date : date,
+			 };
+
+
+			$.ajax({
+				type: 'POST',
+				url: API_GW_URL,
+				data: JSON.stringify(data),
+				contentType:"application/json"
+
+				success: function(data){
+					$('#comm_event_post').html('');
+				}
+
+
+			});
+
+		});
+
+
+		}
+
+		function limitText(limitField, limitCount, limitNum) {
+		if (limitField.value.length > limitNum) {
+			limitField.value = limitField.value.substring(0, limitNum);
+		} else {
+			limitCount.value = limitNum - limitField.value.length;
+		}
+	}
+
+		</script>
+
+
+
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>Housing</title>
@@ -257,6 +325,24 @@
 		left: 597px;
 		top: 10px;
 	}
+
+	.for_sale_post {
+		position: absolute;
+		top: 300px;
+		left: 70px;
+		text-align: left;
+		overflow: visible;
+
+	}
+.card {
+	position: absolute;
+	top: 300px;
+	left: 70px;
+	text-align: left;
+	overflow: visible;
+}
+
+
 </style>
 </head>
 <body>
@@ -324,13 +410,60 @@
 	</svg>
 	<div id="For_Sale">
 
+		<span><a href="For_Sale_2.html"><br/>Sept 15 > DS Air Jordan 1 Size 10  (Wilder Hall) pic<br/></a><br/>Sept 20 > “Ain’t Misbehaven”  (Little Theater Armstrong Hall) pic<br/><br/>Sept 23 > Parents’ Weekend — October 4-6 (Armstrong Stadium) pic<br/><br/>Sep 26 > Accenture Cookout / Kickball (Beamis Lawn) pic<br/><br/>Oct 6 > CAREER FAIR  (Hampton Convocation Center) pic<br/><br/>Next Page ></span><br>
+
 
 	</div>
+
+	<div class="for_sale_post">
+	<form id="for_sale_post" method="post">
+				<h4 style="color:rgba(55,67,196,1);">Add a new Listing <br></br></h4>
+	      <h4 style="color:rgba(55,67,196,1);">Type of item:</h4>
+	      <input type="name" style="height:35px;" id="type-input" placeholder="Enter name of event here…" class="form-control" style="width:100%;" /><br/>
+	      <h4 style="color:rgba(55,67,196,1);">Location:</h4>
+	      <input type="Poc" style="height:35px;" id="location-input" placeholder="Enter point of contact number" class="form-control" style="width:100%;" onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,100);" onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,100);"/><br/>
+				<font size="1">(Maximum characters: 100)<br>You have <input readonly type="text" name="countdown" size="3" value="100"> characters left.</font>
+	      <h4 style="color:rgba(55,67,196,1);">Description:</h4>
+	      <input type="description" style="height:35px;" id="description-input" placeholder="Enter description of event here…" class="form-control" style="width:100%;"/><br/>
+				<h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
+	      <input type="PostDate" style="height:35px;" id="date-input" placeholder="Enter current date here…" class="form-control" style="width:100%;"/><br/>
+	      <button id = 'submitButton' type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+	</form>
+	</div>
+
+
+<body>
+<!--
+	Main form
+<div class="card">
+	<div class="card-body">
+	<h2>Enter information for new listing.</h2>
+	<form method="POST">
+		<div class="form-group">
+			<label for="email">Type</label>
+			<input type="email" class="form-control" id="type"  placeholder="Enter type of event..">
+		</div>
+
+		<div class="form-group">
+			<label for="name">Location</label>
+			<input type="name" class="form-control" id="location"  placeholder="Enter location of event">
+		</div>
+
+		<div class="form-group">
+			<label for="name">Description</label>
+			<input type="name" class="form-control" id="description"  placeholder="Tell us something about the event">
+		</div>
+		<h4 id="response"></h4>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+	</div>
+</div>
+-->
 	<div id="Hampton_University___Housing">
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="For_Sale.html">For Sale</a> <br/> </span>
 	</div>
 	<div id="My_Account___Log_Out">
-		<span>My Account</span>
+		<span>My Account</span>d
 	</div>
 	<svg class="HUCommV1">
 		<pattern elementId="HUCommV1_A6_Rectangle_64" id="HUCommV1_A6_Rectangle_64_pattern" x="0" y="0" width="100%" height="100%">
@@ -340,26 +473,5 @@
 		</rect>
 	</svg>
 </div>
-
-		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-		<script type="text/javascript">
-		var API_URL='https://wwwtqk6qg9.execute-api.us-east-1.amazonaws.com/ToriEpps/tori';
-
-		  $(document).ready(function(){
-			$.ajax({
-				type: 'GET',
-				url: API_URL,
-
-				success: function(data){
-					$('#For_Sale').html('');
-
-					data.Items.forEach(function(getFSItem){
-						$('#For_Sale').append('<p>' + getFSItem.PostDate + " > " + getFSItem.Type + " > " + getFSItem.Description + " > " + getFSItem.Location + '</p>');
-				})
-		}
-	});
-
-	});
-	</script>
 </body>
 </html>
