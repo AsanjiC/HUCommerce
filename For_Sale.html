@@ -262,10 +262,7 @@
 <body>
 <div id="Housing">
 	<div id="NavigationBar_Compact_Light" class="NavigationBar_Compact_Light">
-		<svg class="Background" viewBox="0 0 1254.36 172">
-			<path fill="rgba(248,248,248,0.82)" id="Background" d="M 0 0 L 1254.359985351562 0 L 1254.359985351562 172 L 0 172 L 0 0 Z">
-			</path>
-		</svg>
+		
 		<svg class="Separator">
 			<path fill="transparent" stroke="rgba(0,0,0,0.302)" stroke-width="0.5px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Separator" d="M 0 0 L 1254.359985351562 0">
 			</path>
@@ -277,9 +274,9 @@
 					<table style="width:59.4%">
 					<tr>
 					<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post Date&nbsp;&nbsp;&nbsp;</font></tr>
-					<tr><font size ="6">&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+					<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
 					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
-					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
+					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
 					</tr>
 					</table>
 					</p>
@@ -339,7 +336,7 @@ var API_URL='https://wwwtqk6qg9.execute-api.us-east-1.amazonaws.com/ToriEpps/tor
 			$('HousingEntries').html('');
 			
 			data.Items.forEach(function(getFSItem){
-				$('#HousingEntries').append('<p>' + getFSItem.PostDate + " > " + getFSItem.Type + " > " + getFSItem.Location + " > " + getFSItem.Description + '</p>');
+				$('#HousingEntries').append('<p>' + getFSItem.PostDate + " &nbsp; > &nbsp; " +  getFSItem.Type + " &nbsp; > &nbsp; " + getFSItem.Location + " &nbsp; > &nbsp; " + getFSItem.Description + '<br>' + "&nbsp;" +'</p>');
 		}) 
 }
 });
