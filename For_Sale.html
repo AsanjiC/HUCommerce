@@ -419,7 +419,9 @@
 	<form id="for_sale_post" method="post">
 				<h4 style="color:rgba(55,67,196,1);">Add a new Listing <br></br></h4>
 	      <h4 style="color:rgba(55,67,196,1);">Type of item:</h4>
-	      <input type="name" style="height:35px;" id="type-input" placeholder="Enter name of event here…" class="form-control" style="width:100%;" /><br/>
+	      <input type="name" style="height:35px;" id="type-input" placeholder="Enter type of item here…" class="form-control" style="width:100%;" /><br/>
+
+<!--
 	      <h4 style="color:rgba(55,67,196,1);">Location:</h4>
 	      <input type="Poc" style="height:35px;" id="location-input" placeholder="Enter point of contact number" class="form-control" style="width:100%;" onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,100);" onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,100);"/><br/>
 				<font size="1">(Maximum characters: 100)<br>You have <input readonly type="text" name="countdown" size="3" value="100"> characters left.</font>
@@ -427,6 +429,8 @@
 	      <input type="description" style="height:35px;" id="description-input" placeholder="Enter description of event here…" class="form-control" style="width:100%;"/><br/>
 				<h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
 	      <input type="PostDate" style="height:35px;" id="date-input" placeholder="Enter current date here…" class="form-control" style="width:100%;"/><br/>
+
+-->
 	      <button id = 'submitButton' type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
 	</form>
 	</div>
@@ -463,7 +467,7 @@
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="For_Sale.html">For Sale</a> <br/> </span>
 	</div>
 	<div id="My_Account___Log_Out">
-		<span>My Account</span>d
+		<input type="text" size="35" placeholder="Search..">
 	</div>
 	<svg class="HUCommV1">
 		<pattern elementId="HUCommV1_A6_Rectangle_64" id="HUCommV1_A6_Rectangle_64_pattern" x="0" y="0" width="100%" height="100%">
