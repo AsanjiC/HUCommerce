@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <title>Services</title>
@@ -25,7 +26,7 @@
 		height: 1080px;
 		background-color: rgba(255,255,255,1);
 		overflow: hidden;
-		margin: 0; 
+		margin: 0;
 		padding: 0;
 		--web-view-name: Services;
 		--web-view-id: Services;
@@ -263,6 +264,15 @@
 	paddubg: 5px;
 	text-align: left;}
 }
+
+	.community_event_post {
+		position: absolute;
+		top: 300px;
+		left: 70px;
+		text-align: left;
+		overflow: visible;
+
+	}
 </style>
 </head>
 <body>
@@ -272,29 +282,58 @@
 			<path fill="rgba(248,248,248,0.82)" id="Background" d="M 0 0 L 1254.359985351562 0 L 1254.359985351562 172 L 0 172 L 0 0 Z">
 			</path>
 		</svg>
-	
+
 		<div id="Search_Field_Type">
 			<svg class="Search_Field">
 				<p>
 					<table style="width:59.4%">
 					<tr>
-					<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
-					<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
-					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
-					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
+					<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+					<tr><font size ="6">&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
+					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
 					</tr>
 					</table>
 					</p>
 
 			</svg>
+
+
 			<svg class="__Field_Links_to">
 				<rect fill="rgba(0,0,0,0)" id="__Field_Links_to" rx="0" ry="0" x="0" y="0" width="1223" height="36">
 				</rect>
 			</svg>
-		
-			
+
+	<div class="Service_Posts">
+
+
+	</div>
+	<form>
+		<h4 style="color:rgba(55,67,196,1);">Add a new Listing <br></br></h4>
+
+	      <h4 style="color:rgba(55,67,196,1);">Type of Event:</h4>
+
+	      <input type="text" style="height:35px;" id="Type" placeholder="Enter name of event here…" class="form-control" style="width:100%;" /><br/>
+
+	      <h4 style="color:rgba(55,67,196,1);">Location:</h4>
+
+	      <input type="text" style="height:35px;" id="Location" placeholder="Enter point of contact number…" class="form-control" style="width:100%;" /><br/>
+
+	      <h4 style="color:rgba(55,67,196,1);">Description:</h4>
+
+	      <input type="text" style="height:35px;" id="Subject" placeholder="Enter description of event here…" class="form-control" style="width:100%;" /><br/>
+
+
+	      <h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
+
+	      <input type="text" style="height:35px;" id="PostDate" placeholder="Enter current date here…" class="form-control" style="width:100%;" /><br/>
+
+
+	      <button id = 'submitButton' type="button"  class="btn btn-lg" style="margin-top:20px;">Submit</button>
+	</form>
+
 		</div>
-	
+
 		<div id="Right_Accessory">
 			<svg class="Right_Accessory_background">
 				<rect fill="rgba(0,0,0,0)" id="Right_Accessory_background" rx="0" ry="0" x="0" y="0" width="567.77" height="45.048">
@@ -317,18 +356,24 @@
 		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="163">
 		</rect>
 	</svg>
+
+
 	<div id="Service_Posts">
-		
-		
-		
+
+
 	</div>
+
+
+
 	<div id="Hampton_University___Services_">
-		
+
 		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Services.html">Services</a> <br/> </span>
 
 	</div>
+
+
 	<div id="My_Account___Log_Out">
-		<input type="text" size="35" placeholder="Search..">
+		<span>My Account</span>
 	</div>
 	<svg class="HUCommV1">
 		<pattern elementId="HUCommV1_A4_Rectangle_46" id="HUCommV1_A4_Rectangle_46_pattern" x="0" y="0" width="100%" height="100%">
@@ -339,25 +384,51 @@
 	</svg>
 </div>
 
- <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+ <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
     <script type="text/javascript">
 		var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
-		
+		var API_URLpost ='https://2rkbrminfh.execute-api.us-east-1.amazonaws.com/postServ/newlist';
+
 		$(document).ready(function(){
 			$.ajax({
 				type: 'GET',
 				url: API_URL,
-				
+
 				success: function(data){
 					$('#Service_Posts').html('');
-					
+
 					data.Items.forEach(function(getPostItem){
-						$('#Service_Posts').append('<p>' + getPostItem.PostDate + " &nbsp; > &nbsp; " + getPostItem.Type + " &nbsp; > &nbsp;  " + getPostItem.Location + " &nbsp; > &nbsp; "  + getPostItem.Subject + '<br>' + "&nbsp;" +'</p>');
-				}) 
-		}
+						$('#Service_Posts').append('<p>'  + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getPostItem.PostDate + " &nbsp; > &nbsp; " + getPostItem.Type + " &nbsp; > &nbsp;  " + getPostItem.Location + " &nbsp; > &nbsp; "  + getPostItem.Subject + '<br>' + "&nbsp;" +'</p>');
+					})
+				}
+			});
+
+		});
+
+		$('#submitButton').on('click',function(){
+
+			$.ajax({
+					type: 'POST',
+					url: API_URLpost,
+					data: JSON.stringify({
+						"Type": $("#Type").val(),
+						"PostDate" : $("#PostDate").val(),
+						"Location" : $("#Location").val(),
+						"Subject" : $("#Subject").val()
+					}),
+
+					contentType:"application/json",
+
+					success: function(data){
+						location.reload();
+				}
+
+			});
+
+		return false;
+
 	});
-	
-	});
+
 	</script>
 
 </body>
