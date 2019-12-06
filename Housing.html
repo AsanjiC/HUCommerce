@@ -279,9 +279,9 @@
 					<tr><font size ="6">&nbsp;&nbsp;&nbsp;Type&nbsp;&nbsp;</font></tr>
 					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
 					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
-					</tr>
-					</table>
-					</p>
+				</tr>
+				</table>
+				</p>
 
 			</svg>
 			<svg class="__Field_Links_to">
@@ -289,7 +289,6 @@
 				</rect>
 			</svg>
 		<div class="Service_Posts">
-
 
 	</div>
 	<form>
@@ -307,11 +306,9 @@
 
 	      <input type="text" style="height:35px;" id="Subject" placeholder="Enter description of event here…" class="form-control" style="width:100%;" /><br/>
 
-
 	      <h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
 
 	      <input type="text" style="height:35px;" id="PostDate" placeholder="Enter current date here…" class="form-control" style="width:100%;" /><br/>
-
 
 	      <button id = 'submitButton' type="button"  class="btn btn-lg" style="margin-top:20px;">Submit</button>
 	</form>
@@ -365,7 +362,8 @@
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	
     <script type="text/javascript">
-		var API_URL='https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHS2/JamesSanford';
+		var API_URL='https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod/JamesSanford';
+		var API_URLpost = 'https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod2/storeHousePost';
 		
 		$(document).ready(function(){
 			$.ajax({
@@ -388,9 +386,9 @@
 					url: API_URLpost,
 					data: JSON.stringify({
 						"Type": $("#Type").val(),
-						"PostDate" : $("#PostDate").val(),
+						"Description" : $("#Description").val(),
 						"Location" : $("#Location").val(),
-						"Description" : $("#Description").val()
+						"PostDate" : $("#PostDate").val(),
 					}),
 					contentType:"application/json",
 					success: function(data){
