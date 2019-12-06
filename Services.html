@@ -2,434 +2,510 @@
 <html>
 <head>
 
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Services</title>
-<style id="applicationStylesheet" type="text/css">
-	.mediaViewInfo {
-		--web-view-name: Services;
-		--web-view-id: Services;
-		--web-enable-deep-linking: true;
-	}
-	:root {
-		--web-view-ids: Services;
-	}
-	* {
-		margin: 0;
-		padding: 0;
-	}
-	#Services {
-		position: absolute;
-		box-sizing: border-box;
-		background: #E5E5E5;
-		width: 1920px;
-		height: 1080px;
-		background-color: rgba(255,255,255,1);
-		overflow: hidden;
-		margin: 0;
-		padding: 0;
-		--web-view-name: Services;
-		--web-view-id: Services;
-		--web-enable-deep-linking: true;
-	}
-	#NavigationBar_Compact_Light {
-		position: absolute;
-		width: 1255px;
-		height: 172.25px;
-		left: 333px;
-		top: 115px;
-		overflow: visible;
-	}
-	#Background {
-		filter: blur(10px);
-	}
-	.Background {
-		overflow: visible;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 1254.36px;
-		height: 172px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	.Separator {
-		overflow: visible;
-		position: absolute;
-		top: 172.25px;
-		left: 0px;
-		width: 1254.36px;
-		height: 0.5px;
-	}
-	#Search_Field_Type {
-		position: absolute;
-		width: 1255px;
-		height: 36px;
-		left: 0px;
-		top: 117px;
-		overflow: visible;
-	}
-	.Search_Field_Type_background {
-		position: absolute;
-		overflow: visible;
-		width: 1255px;
-		height: 36px;
-		left: 0px;
-		top: 0px;
-	}
-	.__Field_Links_to {
-		position: absolute;
-		overflow: visible;
-		width: 1223px;
-		height: 36px;
-		left: 17px;
-		top: 0px;
-	}
-	.Search_Field {
-		position: absolute;
-		overflow: visible;
-		width: 1223px;
-		height: 36px;
-		left: 16px;
-		top: 0px;
-	}
-	#__Placeholder_Label {
-		position: absolute;
-		left: 46px;
-		top: 11px;
-		overflow: visible;
-		width: 36px;
-		white-space: nowrap;
-		line-height: 14px;
-		margin-top: -1.5px;
-		text-align: left;
-		font-family: SF Pro Text;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 11px;
-		color: rgba(142,142,147,1);
-		letter-spacing: -0.0040999999642372135px;
-	}
-	#Search_Glyph {
-		position: absolute;
-		width: 14px;
-		height: 14px;
-		left: 24px;
-		top: 11px;
-		overflow: visible;
-	}
-	.Search_Glyph_background {
-		position: absolute;
-		overflow: visible;
-		width: 14px;
-		height: 14px;
-		left: 0px;
-		top: 0px;
-	}
-	.Search {
-		overflow: visible;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		width: 14px;
-		height: 14px;
-		transform: matrix(1,0,0,1,0,0);
-	}
-	#Large_Title {
-		position: absolute;
-		left: 16px;
-		top: 68px;
-		overflow: hidden;
-		width: 426px;
-		height: 49px;
-		line-height: 41px;
-		margin-top: -3.5px;
-		text-align: left;
-		font-family: SF Pro Display;
-		font-style: normal;
-		font-weight: bold;
-		font-size: 34px;
-		color: rgba(0,0,0,1);
-		letter-spacing: -0.0040999999642372135px;
-	}
-	#Right_Accessory {
-		position: absolute;
-		width: 568.694px;
-		height: 45.048px;
-		left: 685.666px;
-		top: 21px;
-		overflow: visible;
-	}
-	.Right_Accessory_background {
-		position: absolute;
-		overflow: visible;
-		width: 567.77px;
-		height: 45.048px;
-		left: 0px;
-		top: 0px;
-	}
-	.Button_Links_to {
-		position: absolute;
-		overflow: visible;
-		width: 491.694px;
-		height: 45.048px;
-		left: 77px;
-		top: 0px;
-	}
-	#__Label {
-		position: absolute;
-		left: 263.914px;
-		top: 10px;
-		overflow: hidden;
-		width: 290.781px;
-		height: 22px;
-		line-height: 22px;
-		margin-top: -2.5px;
-		text-align: right;
-		font-family: SF Pro Text;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 17px;
-		color: rgba(0,122,255,1);
-		letter-spacing: -0.0040999999642372135px;
-	}
-	.Rectangle_1 {
-		position: absolute;
-		overflow: visible;
-		width: 1920px;
-		height: 115px;
-		left: 0px;
-		top: 965px;
-	}
-	.Rectangle_2 {
-		position: absolute;
-		overflow: visible;
-		width: 1920px;
-		height: 163px;
-		left: 0px;
-		top: 0px;
-	}
-	#Service_Posts {
-		position: absolute;
-		left: 443.5px;
-		top: 316.5px;
-		overflow: visible;
-		width: 1035px;
-		white-space: nowrap;
-		text-align: left;
-		font-family: Franklin Gothic Book;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 32px;
-		color: rgba(55,67,196,1);
-	}
-	#Hampton_University___Services_ {
-		position: absolute;
-		left: 29px;
-		top: 71px;
-		overflow: visible;
-		width: 469px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Franklin Gothic Book;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 35px;
-		color: rgba(55,67,196,1);
-	}
-	#My_Account___Log_Out {
-		position: absolute;
-		left: 1518px;
-		top: 71px;
-		overflow: visible;
-		width: 319px;
-		white-space: nowrap;
-		text-align: center;
-		font-family: Franklin Gothic Book;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 35px;
-		color: rgba(55,67,196,1);
-	}
-	.HUCommV1 {
-		position: absolute;
-		overflow: visible;
-		width: 727px;
-		height: 162px;
-		left: 597px;
-		top: 10px;
-	}
-		table, th, td{
-	}
-	th, td{
-	paddubg: 5px;
-	text-align: left;}
-}
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Services</title>
+    <style id="applicationStylesheet" type="text/css">
+        .mediaViewInfo {
+            --web-view-name: Services;
+            --web-view-id: Services;
+            --web-enable-deep-linking: true;
+        }
 
-	.community_event_post {
-		position: absolute;
-		top: 300px;
-		left: 70px;
-		text-align: left;
-		overflow: visible;
+        :root {
+            --web-view-ids: Services;
+        }
 
-	}
-</style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #Services {
+            position: absolute;
+            box-sizing: border-box;
+            background: #E5E5E5;
+            width: 1920px;
+            height: 1080px;
+            background-color: rgba(255, 255, 255, 1);
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            --web-view-name: Services;
+            --web-view-id: Services;
+            --web-enable-deep-linking: true;
+        }
+
+        #NavigationBar_Compact_Light {
+            position: absolute;
+            width: 1255px;
+            height: 172.25px;
+            left: 333px;
+            top: 115px;
+            overflow: visible;
+        }
+
+        #Background {
+            filter: blur(10px);
+        }
+
+        .Background {
+            overflow: visible;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 1254.36px;
+            height: 172px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        .Separator {
+            overflow: visible;
+            position: absolute;
+            top: 172.25px;
+            left: 0px;
+            width: 1254.36px;
+            height: 0.5px;
+        }
+
+        #Search_Field_Type {
+            position: absolute;
+            width: 1255px;
+            height: 36px;
+            left: 0px;
+            top: 117px;
+            overflow: visible;
+        }
+
+        .Search_Field_Type_background {
+            position: absolute;
+            overflow: visible;
+            width: 1255px;
+            height: 36px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .__Field_Links_to {
+            position: absolute;
+            overflow: visible;
+            width: 1223px;
+            height: 36px;
+            left: 17px;
+            top: 0px;
+        }
+
+        .Search_Field {
+            position: absolute;
+            overflow: visible;
+            width: 1223px;
+            height: 36px;
+            left: 16px;
+            top: 0px;
+        }
+
+        #__Placeholder_Label {
+            position: absolute;
+            left: 46px;
+            top: 11px;
+            overflow: visible;
+            width: 36px;
+            white-space: nowrap;
+            line-height: 14px;
+            margin-top: -1.5px;
+            text-align: left;
+            font-family: SF Pro Text;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 11px;
+            color: rgba(142, 142, 147, 1);
+            letter-spacing: -0.0040999999642372135px;
+        }
+
+        #Search_Glyph {
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            left: 24px;
+            top: 11px;
+            overflow: visible;
+        }
+
+        .Search_Glyph_background {
+            position: absolute;
+            overflow: visible;
+            width: 14px;
+            height: 14px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .Search {
+            overflow: visible;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 14px;
+            height: 14px;
+            transform: matrix(1, 0, 0, 1, 0, 0);
+        }
+
+        #Large_Title {
+            position: absolute;
+            left: 16px;
+            top: 68px;
+            overflow: hidden;
+            width: 426px;
+            height: 49px;
+            line-height: 41px;
+            margin-top: -3.5px;
+            text-align: left;
+            font-family: SF Pro Display;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 34px;
+            color: rgba(0, 0, 0, 1);
+            letter-spacing: -0.0040999999642372135px;
+        }
+
+        #Right_Accessory {
+            position: absolute;
+            width: 568.694px;
+            height: 45.048px;
+            left: 685.666px;
+            top: 21px;
+            overflow: visible;
+        }
+
+        .Right_Accessory_background {
+            position: absolute;
+            overflow: visible;
+            width: 567.77px;
+            height: 45.048px;
+            left: 0px;
+            top: 0px;
+        }
+
+        .Button_Links_to {
+            position: absolute;
+            overflow: visible;
+            width: 491.694px;
+            height: 45.048px;
+            left: 77px;
+            top: 0px;
+        }
+
+        #__Label {
+            position: absolute;
+            left: 263.914px;
+            top: 10px;
+            overflow: hidden;
+            width: 290.781px;
+            height: 22px;
+            line-height: 22px;
+            margin-top: -2.5px;
+            text-align: right;
+            font-family: SF Pro Text;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 17px;
+            color: rgba(0, 122, 255, 1);
+            letter-spacing: -0.0040999999642372135px;
+        }
+
+        .Rectangle_1 {
+            position: absolute;
+            overflow: visible;
+            width: 1920px;
+            height: 115px;
+            left: 0px;
+            top: 965px;
+        }
+
+        .Rectangle_2 {
+            position: absolute;
+            overflow: visible;
+            width: 1920px;
+            height: 163px;
+            left: 0px;
+            top: 0px;
+        }
+
+        #Service_Posts {
+            position: absolute;
+            left: 443.5px;
+            top: 316.5px;
+            overflow: visible;
+            width: 1035px;
+            white-space: nowrap;
+            text-align: left;
+            font-family: Franklin Gothic Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            color: rgba(55, 67, 196, 1);
+        }
+
+        #Hampton_University___Services_ {
+            position: absolute;
+            left: 29px;
+            top: 71px;
+            overflow: visible;
+            width: 469px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Franklin Gothic Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 35px;
+            color: rgba(55, 67, 196, 1);
+        }
+
+        #My_Account___Log_Out {
+            position: absolute;
+            left: 1518px;
+            top: 71px;
+            overflow: visible;
+            width: 319px;
+            white-space: nowrap;
+            text-align: center;
+            font-family: Franklin Gothic Book;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 35px;
+            color: rgba(55, 67, 196, 1);
+        }
+
+        .HUCommV1 {
+            position: absolute;
+            overflow: visible;
+            width: 727px;
+            height: 162px;
+            left: 597px;
+            top: 10px;
+        }
+
+        table, th, td {
+        }
+
+        th, td {
+            paddubg: 5px;
+            text-align: left;
+        }
+
+        }
+
+        .community_event_post {
+            position: absolute;
+            top: 300px;
+            left: 70px;
+            text-align: left;
+            overflow: visible;
+
+        }
+    </style>
 </head>
 <body>
 <div id="Services">
-	<div id="NavigationBar_Compact_Light" class="NavigationBar_Compact_Light">
-		<svg class="Background" viewBox="0 0 1254.36 172">
-			<path fill="rgba(248,248,248,0.82)" id="Background" d="M 0 0 L 1254.359985351562 0 L 1254.359985351562 172 L 0 172 L 0 0 Z">
-			</path>
-		</svg>
+    <div id="NavigationBar_Compact_Light" class="NavigationBar_Compact_Light">
+        <svg class="Background" viewBox="0 0 1254.36 172">
+            <path fill="rgba(248,248,248,0.82)" id="Background"
+                  d="M 0 0 L 1254.359985351562 0 L 1254.359985351562 172 L 0 172 L 0 0 Z">
+            </path>
+        </svg>
 
-		<div id="Search_Field_Type">
-			<svg class="Search_Field">
-				<p>
-					<table style="width:59.4%">
-					<tr>
-					<tr><font size ="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
-					<tr><font size ="6">&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
-					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font></tr>
-					<tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font></tr>
-					</tr>
-					</table>
-					</p>
+        <div id="Search_Field_Type">
+            <svg class="Search_Field">
+                <p>
+                <table style="width:59.4%">
+                    <tr>
+                    <tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Post
+                        Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+                    <tr><font size="6">&nbsp;Type&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font></tr>
+                    <tr><font
+                            size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Location&nbsp;&nbsp;</font>
+                    </tr>
+                    <tr><font size="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Description&nbsp;&nbsp;</font>
+                    </tr>
+                    </tr>
+                </table>
+                </p>
 
-			</svg>
-
-
-			<svg class="__Field_Links_to">
-				<rect fill="rgba(0,0,0,0)" id="__Field_Links_to" rx="0" ry="0" x="0" y="0" width="1223" height="36">
-				</rect>
-			</svg>
-
-	<div class="Service_Posts">
+            </svg>
 
 
-	</div>
-	<form>
-		<h4 style="color:rgba(55,67,196,1);">Add a new Listing <br></br></h4>
+            <svg class="__Field_Links_to">
+                <rect fill="rgba(0,0,0,0)" id="__Field_Links_to" rx="0" ry="0" x="0" y="0" width="1223" height="36">
+                </rect>
+            </svg>
 
-	      <h4 style="color:rgba(55,67,196,1);">Type of Event:</h4>
-
-	      <input type="text" style="height:35px;" id="Type" placeholder="Enter name of event here…" class="form-control" style="width:100%;" /><br/>
-
-	      <h4 style="color:rgba(55,67,196,1);">Location:</h4>
-
-	      <input type="text" style="height:35px;" id="Location" placeholder="Enter point of contact number…" class="form-control" style="width:100%;" /><br/>
-
-	      <h4 style="color:rgba(55,67,196,1);">Description:</h4>
-
-	      <input type="text" style="height:35px;" id="Subject" placeholder="Enter description of event here…" class="form-control" style="width:100%;" /><br/>
+            <div class="Service_Posts">
 
 
-	      <h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
+            </div>
+            <br>
+            <label style="color:rgba(55,67,196,1); font-weight: bolder" for="searchString">Search Service Listings</label><br>
+            <input type="text" name="searchString" id="searchString" value="" class="form-control"
+                   placeholder="Enter text here">
+            <br><br>
+            <form>
+                <h4 style="color:rgba(55,67,196,1);">Add a new Listing <br></br></h4>
 
-	      <input type="text" style="height:35px;" id="PostDate" placeholder="Enter current date here…" class="form-control" style="width:100%;" /><br/>
+                <h4 style="color:rgba(55,67,196,1);">Type of Event:</h4>
 
+                <input type="text" style="height:35px;" id="Type" placeholder="Enter name of event here…"
+                       class="form-control" style="width:100%;"/><br/>
 
-	      <button id = 'submitButton' type="button"  class="btn btn-lg" style="margin-top:20px;">Submit</button>
-	</form>
+                <h4 style="color:rgba(55,67,196,1);">Location:</h4>
 
-		</div>
+                <input type="text" style="height:35px;" id="Location" placeholder="Enter point of contact number…"
+                       class="form-control" style="width:100%;"/><br/>
 
-		<div id="Right_Accessory">
-			<svg class="Right_Accessory_background">
-				<rect fill="rgba(0,0,0,0)" id="Right_Accessory_background" rx="0" ry="0" x="0" y="0" width="567.77" height="45.048">
-				</rect>
-			</svg>
-			<svg class="Button_Links_to">
-				<rect fill="rgba(0,0,0,0)" id="Button_Links_to" rx="0" ry="0" x="0" y="0" width="491.694" height="45.048">
-				</rect>
-			</svg>
-			<div id="__Label">
-				<span>Action</span>
-			</div>
-		</div>
-	</div>
-	<svg class="Rectangle_1">
-		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="0" ry="0" x="0" y="0" width="1920" height="115">
-		</rect>
-	</svg>
-	<svg class="Rectangle_2">
-		<rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0" y="0" width="1920" height="163">
-		</rect>
-	</svg>
+                <h4 style="color:rgba(55,67,196,1);">Description:</h4>
+
+                <input type="text" style="height:35px;" id="Subject" placeholder="Enter description of event here…"
+                       class="form-control" style="width:100%;"/><br/>
 
 
-	<div id="Service_Posts">
+                <h4 style="color:rgba(55,67,196,1);">Post Date (Todays Date):</h4>
+
+                <input type="text" style="height:35px;" id="PostDate" placeholder="Enter current date here…"
+                       class="form-control" style="width:100%;"/><br/>
 
 
-	</div>
+                <button id='submitButton' type="button" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+            </form>
+
+        </div>
+
+        <div id="Right_Accessory">
+            <svg class="Right_Accessory_background">
+                <rect fill="rgba(0,0,0,0)" id="Right_Accessory_background" rx="0" ry="0" x="0" y="0" width="567.77"
+                      height="45.048">
+                </rect>
+            </svg>
+            <svg class="Button_Links_to">
+                <rect fill="rgba(0,0,0,0)" id="Button_Links_to" rx="0" ry="0" x="0" y="0" width="491.694"
+                      height="45.048">
+                </rect>
+            </svg>
+            <div id="__Label">
+                <span>Action</span>
+            </div>
+        </div>
+    </div>
+    <svg class="Rectangle_1">
+        <rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter"
+              stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_1" rx="0" ry="0" x="0"
+              y="0" width="1920" height="115">
+        </rect>
+    </svg>
+    <svg class="Rectangle_2">
+        <rect fill="rgba(198,231,228,1)" stroke="rgba(112,112,112,1)" stroke-width="1px" stroke-linejoin="miter"
+              stroke-linecap="butt" stroke-miterlimit="4" shape-rendering="auto" id="Rectangle_2" rx="0" ry="0" x="0"
+              y="0" width="1920" height="163">
+        </rect>
+    </svg>
 
 
-
-	<div id="Hampton_University___Services_">
-
-		<span><a href="Home_Page.html">Hampton University</a>  > <a href="Services.html">Services</a> <br/> </span>
-
-	</div>
+    <div id="Service_Posts">
 
 
-	<div id="My_Account___Log_Out">
-		<span>My Account</span>
-	</div>
-	<svg class="HUCommV1">
-		<pattern elementId="HUCommV1_A4_Rectangle_46" id="HUCommV1_A4_Rectangle_46_pattern" x="0" y="0" width="100%" height="100%">
-			<image x="0" y="0" width="100%" height="100%" href="HUCommV1_A4_Rectangle_46_pattern.png" xlink:href="HUCommV1_A4_Rectangle_46_pattern.png"></image>
-		</pattern>
-		<rect fill="url(#HUCommV1_A4_Rectangle_46_pattern)" id="HUCommV1" rx="0" ry="0" x="0" y="0" width="727" height="162">
-		</rect>
-	</svg>
+    </div>
+
+
+    <div id="Hampton_University___Services_">
+
+        <span><a href="Home_Page.html">Hampton University</a>  > <a href="Services.html">Services</a> <br/> </span>
+
+    </div>
+
+
+    <div id="My_Account___Log_Out">
+        <span>  </span>
+    </div>
+    <svg class="HUCommV1">
+        <pattern elementId="HUCommV1_A4_Rectangle_46" id="HUCommV1_A4_Rectangle_46_pattern" x="0" y="0" width="100%"
+                 height="100%">
+            <image x="0" y="0" width="100%" height="100%" href="HUCommV1_A4_Rectangle_46_pattern.png"
+                   xlink:href="HUCommV1_A4_Rectangle_46_pattern.png"></image>
+        </pattern>
+        <rect fill="url(#HUCommV1_A4_Rectangle_46_pattern)" id="HUCommV1" rx="0" ry="0" x="0" y="0" width="727"
+              height="162">
+        </rect>
+    </svg>
 </div>
 
- <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-    <script type="text/javascript">
-		var API_URL='https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
-		var API_URLpost ='https://2rkbrminfh.execute-api.us-east-1.amazonaws.com/postServ/newlist';
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script type="text/javascript">
+    var API_URL = 'https://m8h2vx0oa2.execute-api.us-east-1.amazonaws.com/prod/entries';
+    var API_URLpost = 'https://2rkbrminfh.execute-api.us-east-1.amazonaws.com/postServ/newlist';
+    var SEARCH_API_URL = 'https://2rkbrminfh.execute-api.us-east-1.amazonaws.com/postServ/newlist';
 
-		$(document).ready(function(){
-			$.ajax({
-				type: 'GET',
-				url: API_URL,
+    $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: API_URL,
 
-				success: function(data){
-					$('#Service_Posts').html('');
+            success: function (data) {
+                $('#Service_Posts').html('');
 
-					data.Items.forEach(function(getPostItem){
-						$('#Service_Posts').append('<p>'  + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getPostItem.PostDate + " &nbsp; > &nbsp; " + getPostItem.Type + " &nbsp; > &nbsp;  " + getPostItem.Location + " &nbsp; > &nbsp; "  + getPostItem.Subject + '<br>' + "&nbsp;" +'</p>');
-					})
-				}
-			});
+                data.Items.forEach(function (getPostItem) {
+                    $('#Service_Posts').append('<p>' + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getPostItem.PostDate + " &nbsp; > &nbsp; " + getPostItem.Type + " &nbsp; > &nbsp;  " + getPostItem.Location + " &nbsp; > &nbsp; " + getPostItem.Subject + '<br>' + "&nbsp;" + '</p>');
+                })
+            }
+        });
 
-		});
+        $("#searchString").on('keyup', function () {
+            var searchString = (this.value).toLowerCase();
+            $.ajax({
+                type: 'GET',
+                url: API_URL,
+                success: function (data) {
+                    $('#Service_Posts').html('');
 
-		$('#submitButton').on('click',function(){
+                    data.Items.forEach(function (getPostItem) {
+                        if (searchString !== '') {
+                            if ((getPostItem.PostDate).indexOf(searchString) !== -1 || (getPostItem.Type).toLowerCase().indexOf(searchString) !== -1 || (getPostItem.Location).toLowerCase().indexOf(searchString)  !== -1 || (getPostItem.Subject).toLowerCase().indexOf(searchString) !== -1) {
+                                $('#Service_Posts').append('<p>' + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getPostItem.PostDate + " &nbsp; > &nbsp; " + getPostItem.Type + " &nbsp; > &nbsp;  " + getPostItem.Location + " &nbsp; > &nbsp; " + getPostItem.Subject + '<br>' + "&nbsp;" + '</p>');
+                            }
+                        } else {
+                            $('#Service_Posts').append('<p>' + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getPostItem.PostDate + " &nbsp; > &nbsp; " + getPostItem.Type + " &nbsp; > &nbsp;  " + getPostItem.Location + " &nbsp; > &nbsp; " + getPostItem.Subject + '<br>' + "&nbsp;" + '</p>');
+                        }
 
-			$.ajax({
-					type: 'POST',
-					url: API_URLpost,
-					data: JSON.stringify({
-						"Type": $("#Type").val(),
-						"PostDate" : $("#PostDate").val(),
-						"Location" : $("#Location").val(),
-						"Subject" : $("#Subject").val()
-					}),
+                    })
+                }
+            });
+        });
 
-					contentType:"application/json",
+    });
 
-					success: function(data){
-						location.reload();
-				}
 
-			});
+    $('#submitButton').on('click', function () {
 
-		return false;
+        $.ajax({
+            type: 'POST',
+            url: API_URLpost,
+            data: JSON.stringify({
+                "Type": $("#Type").val(),
+                "PostDate": $("#PostDate").val(),
+                "Location": $("#Location").val(),
+                "Subject": $("#Subject").val()
+            }),
 
-	});
+            contentType: "application/json",
 
-	</script>
+            success: function (data) {
+                location.reload();
+            }
+
+        });
+
+        return false;
+
+    });
+
+</script>
 
 </body>
 </html>
