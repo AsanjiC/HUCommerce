@@ -362,41 +362,58 @@
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 	
     <script type="text/javascript">
-		var API_URL='https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod/JamesSanford';
-		var API_URLpost = 'https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod/JamesSanford';
+		var API_URL='https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod2/JamesSanford';
+		var API_URLpost = 'https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod2/storeHousePost';
 		
-		$(document).ready(function(){
-			$.ajax({
-				type: 'GET',
-				url: API_URL,
-				
-				success: function(data){
-					$('#HousingEntries').html('');
-					
-					data.Items.forEach(function(getItem){
-						$('#HousingEntries').append('<p>'  + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getItem.Postdate + " &nbsp; > &nbsp; " + getItem.Type + " &nbsp; > &nbsp;  " + getItem.Location + " &nbsp; > &nbsp; "  + getItem.Description + '<br>' + "&nbsp;" +'</p>');
-				}) 
-		}
-	});
-	
-	});
-	$('#submitButton').on('click',function(){
-			$.ajax({
-					type: 'POST',
-					url: API_URLpost,
-					data: JSON.stringify({
-						"Type": $("#Type").val(),
-						"Description" : $("#Description").val(),
-						"Location" : $("#Location").val(),
-						"Postdate" : $("#Postdate").val(),
-					}),
-					contentType:"application/json",
-					success: function(data){
-						location.reload();
-				}
-			});
-		return false;
-	});
+    $(document).ready(function () {
+        $.ajax({
+            type: 'GET',
+            url: API_URL,
+            success: function (data) {
+                $('#HousingEntries').html('');
+                data.Items.forEach(function (getItem) {
+                    $('#HousingEntries').append('<p>' + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getItem.Postdate + " &nbsp; > &nbsp; " + getItem.Type + " &nbsp; > &nbsp;  " + getItem.Location + " &nbsp; > &nbsp; " + getItem.Description + '<br>' + "&nbsp;" + '</p>');
+                })
+            }
+        });
+        $("#searchString").on('keyup', function () {
+            var searchString = (this.value).toLowerCase();
+            $.ajax({
+                type: 'GET',
+                url: API_URL,
+                success: function (data) {
+                    $('#HousingEntries').html('');
+                    data.Items.forEach(function (getPostItem) {
+                        if (searchString !== '') {
+                            if ((getItem.Postdate).indexOf(searchString) !== -1 || (getItem.Type).toLowerCase().indexOf(searchString) !== -1 || (getItem.Location).toLowerCase().indexOf(searchString)  !== -1 || (getItem.Description).toLowerCase().indexOf(searchString) !== -1) {
+                                $('#HousingEntries').append('<p>' + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getItem.Postdate + " &nbsp; > &nbsp; " + getItem.Type + " &nbsp; > &nbsp;  " + getItem.Location + " &nbsp; > &nbsp; " + getItem.Description + '<br>' + "&nbsp;" + '</p>');
+                            }
+                        } else {
+                            $('#HousingEntries').append('<p>' + " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; " + getItem.Postdate + " &nbsp; > &nbsp; " + getItem.Type + " &nbsp; > &nbsp;  " + getItem.Location + " &nbsp; > &nbsp; " + getItem.Description + '<br>' + "&nbsp;" + '</p>');
+                        }
+                    })
+                }
+            });
+        });
+    });
+    $('#submitButton').on('click', function () {
+        $.ajax({
+            type: 'POST',
+            url: API_URLpost,
+            data: JSON.stringify({
+                "Type": $("#Type").val(),
+                "Description": $("#Description").val(),
+                "Location": $("#Location").val(),
+                "Postdate": $("#Postdate").val()
+            }),
+            contentType: "application/json",
+            success: function (data) {
+                location.reload();
+            }
+        });
+        return false;
+    });
 </script>
+
 </body>
 </html>
