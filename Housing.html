@@ -363,7 +363,7 @@
 	
     <script type="text/javascript">
 		var API_URL='https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod/JamesSanford';
-		var API_URLpost = 'https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod2/storeHousePost';
+		var API_URLpost = 'https://30ewm219g6.execute-api.us-east-1.amazonaws.com/JHSprod/JamesSanford';
 		
 		$(document).ready(function(){
 			$.ajax({
@@ -388,7 +388,7 @@
 						"Type": $("#Type").val(),
 						"Description" : $("#Description").val(),
 						"Location" : $("#Location").val(),
-						"PostDate" : $("#PostDate").val(),
+						"Postdate" : $("#Postdate").val(),
 					}),
 					contentType:"application/json",
 					success: function(data){
